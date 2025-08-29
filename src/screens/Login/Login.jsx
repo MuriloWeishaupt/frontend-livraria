@@ -3,8 +3,12 @@ import './Login.css'
 
 
 export default function Login() {
-    const [email, setEmail] =useState("");
-    const [password, setPassword] =useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function handleLogin(e) {
+        e.preventDefault()
+    }
 
     return (
         <div className="login-container">
@@ -14,10 +18,23 @@ export default function Login() {
                 </div>
                 <div className="login-right">
                     <h2>LOGIN</h2>
-                    <form action="submit">
-                        <input type="text"/>
-                        <input type="password" />
+                    <form onSubmit={handleLogin}
+                    
+                    >
+                        <input 
+                            type="text" 
+                            placeholder ="Insira seu Email: "
+                            value={email}
+                            onChange={(e) => {setEmail(e.target.value)}}
+                            />
+                        <input 
+                            type="password" 
+                            placeholder ="Insira sua Senha: "
+                            value={password}
+                            onChange={(e) => {setPassword(e.target.value)}}
+                            />
                         <button>Acessar</button>
+                        <p className="criar-conta">Não possui uma conta? <a>cadastre-se</a></p>
                     </form>
                 </div>
             </div>
