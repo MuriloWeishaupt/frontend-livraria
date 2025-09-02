@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import './Login.css'
+import api from '../../services/api.js'
 
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function handleLogin(e) {
+    async function handleLogin (e) {
         e.preventDefault()
+
+        try {
+            const payload = {email, password}
+
+            const { data } = await api.post('/login', payload);
+            alert(data.response);
+
+            sessionStorage.setItem("token-jwt", data.token);
+
+
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return (
