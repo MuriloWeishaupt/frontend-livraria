@@ -1,0 +1,119 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.livraria-container {
+  padding-top: 80px;
+  margin-top: 80px;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.livraria-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f4c430;
+}
+
+.livraria-header h1 {
+  font-size: 2.8rem;
+  color: #b5651d;
+  margin-bottom: 10px;
+}
+
+.livraria-header p {
+  font-size: 1.3rem;
+  color: #6b4c1e;
+}
+
+.livros-lista {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.livro-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.livro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.livro-card img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.livro-card h3 {
+  color: #b5651d;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.autor {
+  color: #a97c50;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.btn-detalhes {
+  background-color: #f4c430;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #5a3e1b;
+  transition: background-color 0.3s ease;
+}
+
+.btn-detalhes:hover {
+  background-color: #ddb30c;
+}
+
+.livraria-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.btn-ver-mais {
+  background-color: #b5651d;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn-ver-mais:hover {
+  background-color: #8e4310;
+}
