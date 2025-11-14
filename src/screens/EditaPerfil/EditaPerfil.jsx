@@ -48,7 +48,7 @@ export default function EditaPerfil() {
       const formData = new FormData();
       formData.append("uploads", selectedImage);
 
-      await api.post("/upload", formData, {
+      await api.post("/user/upload", formData, {
         headers: {
           Authorization: `Bearer ${tokenJWT}`,
           "Content-Type": "multipart/form-data",
@@ -74,7 +74,7 @@ export default function EditaPerfil() {
     const userId = decoded.UserId;
 
     const payload = {
-      id: userId,
+      id: Number(userId),
       name: username,
       email,
       password,

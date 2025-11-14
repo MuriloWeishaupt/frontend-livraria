@@ -30,9 +30,10 @@ function Index() {
     return (
         <>
             <NavBar />
-            <div>
-                <h1>Dados de Autor</h1>
-                <table>
+            <div className="container-author">
+                <h1>Dados dos Autores</h1>
+
+                <table className="author-table">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -41,19 +42,18 @@ function Index() {
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            authors.map((author, index) => (
-                                <tr key={index}>
-                                    <td>{author.name_author}</td>
-                                    <td>{author.nationality}</td>
-                                    <td>{new Date(author.nasc_author).toLocaleDateString("pt-BR")}</td>
-                                </tr>
-                            ))
-                        }
+                        {authors.map((author, index) => (
+                            <tr key={index}>
+                                <td>{author.name_author}</td>
+                                <td>{author.nationality}</td>
+                                <td>{new Date(author.nasc_author).toLocaleDateString("pt-BR")}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
         </>
-    )};
+    );
+}
 
 export default Index;
